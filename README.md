@@ -1,5 +1,6 @@
 ## Preview
 <img width="663" height="517" alt="Image" src="https://github.com/user-attachments/assets/8b9d38a5-efcb-49c5-8094-bd8a0a90709b" />
+
 ## Intro 
 This is a practice project that draws a line of best fit without the help of machine learning libraries so as to better understand the math that goes behind calculating cost, gradient and gradient descent.
 
