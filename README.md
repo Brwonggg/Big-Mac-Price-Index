@@ -1,32 +1,36 @@
-problems that arise and how i fixed it:
-initially i wanted to use just the beatifulsoup and requests modules to get the values for the data but then i found that i couldnt do so because the site renders with javascript so my code was unable to read it since it only understands raw html and so i decided to instead use selenium which is capable of running javascript 
-
-had trouble turning the data the prices and the years into a proper dictionary which could be written into a csv file using DictWriter because of the headings/fieldnames
-
-the website i was parsing has a captcha to prove not a robot so i had to swap from selenium to seleniumbase UC mode to bypass it or else the website cant be parsed
-
-
-
-
-## Preview(video demonstration)
-
+## Preview
+<img width="663" height="517" alt="Image" src="https://github.com/user-attachments/assets/8b9d38a5-efcb-49c5-8094-bd8a0a90709b" />
 ## Intro 
+This is a practice project that draws a line of best fit without the help of machine learning libraries so as to better understand the math that goes behind calculating cost, gradient and gradient descent.
 
-## Technologies(tech stack used)
+## Technologies
+- Jupyter Notebook 
+- Python
 
-## Running the project(pip install)
+## Running The Project
+To run the project in your own local environment, follow these steps:
 
-## Features (Flow of project)
+1. Clone the repository to your local machine
+2. Run `pip install -r requirements.txt`
+3. Run all the cells
 
-## Project Structure (How I built it/key files)
+## Features
+1. Convert the data to perform linear regression on into a csv file 
+2. Tune the hyperparameters of learning rate alpha and number of iterations to minimize the cost function
+3. Plot the relationship on a graph along with the line of best fit
+4. For predicting the value of a point in the y-axis given a point in the x-axis, use predict() which takes user input and returns a prediction
 
-## Reasoning Behind Certain Choices (impt)
-
-## Lessons Learnt
+## Reasoning Behind Certain Choices
+I took the Z-score of x as denoted by x = (years - x_mean) / x_std because the value of x which is the year would overpower the other elements of the equation and would render them insignificant so taking the Z-score tones down the influence that x has such that b will be of similar magnitude and have a significant effect on the outcome.
 
 ## Limitations
+There are possible cases of underfitting as this project only draws a straight line of best fit, so it will not be able to perfectly capture all the data and trends.
 
-## How it can be improved 
+The current version of this project requires you to either download or add your data into a csv file manually.
 
-(Unit tests)
-(Docstrings, type hints, comments)
+## How It Can Be Improved 
+Polynomial regression where x is raised to powers greater than one allows curves to be drawn, combat underfitting and thus better match the data/trend.
+
+You can use the BeautifulSoup and Selenium libraries to parse websites and get live data from there instead of needing to manually download/add the data into a csv file, you can set up a website parser to write the data into your csv file.
+
+
